@@ -2,13 +2,12 @@ const apiKey = "e5f6724a0d910e4c9cb00f6c27c6e2cd"
 const x = document.getElementById("demo")
 
 // Function to get location via browser geolocation
-function getLocation(){
-    if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(success, error)
-    }
-    else { 
-    x.innerHTML = "Geolocation is not supported by this browser."
+
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, error)
   }
+else { 
+  x.innerHTML = "Geolocation is not supported by this browser."
 }
 
 async function success(position) {

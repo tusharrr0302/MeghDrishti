@@ -45,13 +45,6 @@ body {
     background-color: #333;
 }
 
-.nav-link.active,
-.nav-home[href="home.html"]:not([href="index.html"]):not([href="about.html"]),
-.nav-weather[href="index.html"],
-.nav-about[href="about.html"] {
-    color: #ffffff;
-    background-color: #00bfff;
-}
 
 main {
     flex: 1;
@@ -156,4 +149,38 @@ input#pincode:focus {
         margin-bottom: 10px;
         margin-right: 0;
     }
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 230px;   
+    box-sizing: border-box;
+}
+
+.map-and-data {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.MeghVani {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: #fcfcfc;
+  align-self: center;
+  margin-right: 20px;
+  
+}
+
+.vani {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  color: #00bfff;
+  align-self: center;
+  margin-right: 20px;
+  
 }
