@@ -184,3 +184,12 @@ x.innerHTML = `
   </div>`;
 x.style.color = "white";
 });
+
+
+// //weekly weather display (placeholder)
+// const weeklyweather = document.getElementById("weekly-weather");
+// const resweekly = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=20.5937&lon=78.9629&appid=${apiKey}`);
+// const dataweekly = await resweekly.json();
+// console.log(dataweekly);
+
+// weeklyweather.innerHTML = `<h2 style="color:white; text-align:center; margin-bottom:20px;">5-Day Weather Forecast (Every 3 Hours)</h2>`;
