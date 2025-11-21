@@ -1,3 +1,5 @@
+
+
 const clientId = "73705189850145dabc55a8e8be71e94a";
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
@@ -46,7 +48,7 @@ async function generateCodeChallenge(codeVerifier) {
 }
 
 async function redirectToAuthCodeFlow(clientId) {
-    const verifier = generateCodeVerifier(128);
+    const verifier = await generateCodeVerifier(128);
     const challenge = await generateCodeChallenge(verifier);
 
     localStorage.setItem("verifier", verifier);
@@ -92,19 +94,16 @@ if (!code) {
 }
 
 
-
-
-
 //Music-Sub.html 
 
-
 window.onSpotifyWebPlaybackSDKReady = () => {
-            const token = token;
+            const token = getAccessToken(clientId, code);
             const player = new Spotify.Player({
                 name: 'Web Playback SDK Quick Start Player',
                 getOAuthToken: cb => { cb(token); },
-                volume: 0.5
-});
+
+ });
+}
 
             // Ready
 player.addListener('ready', ({ device_id }) => {
@@ -127,7 +126,3 @@ player.addListener('account_error', ({ message }) => {
     player.togglePlay();};
 
 player.connect();
-        }
-
-
-
