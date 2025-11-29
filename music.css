@@ -10,7 +10,7 @@
     font-family: 'Segoe UI', Arial, sans-serif;
     box-shadow: 0 -5px 25px rgba(0,0,0,0.6);
     z-index: 1000;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px)
 }
 
 .player-container {
@@ -20,7 +20,7 @@
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 15px
 }
 
 .track-info h3 {
@@ -28,13 +28,13 @@
     font-size: 1.1rem;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis
 }
 
 .track-info p {
     margin: 5px 0 0;
     opacity: 0.85;
-    font-size: 0.9rem;
+    font-size: 0.9rem
 }
 
 .weather-tag {
@@ -42,7 +42,7 @@
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
-    margin-left: 8px;
+    margin-left: 8px
 }
 
 .controls button {
@@ -53,31 +53,99 @@
     cursor: pointer;
     padding: 8px;
     opacity: 0.8;
-    transition: all 0.2s;
+    transition: all 0.2s
 }
 
 .controls button:hover {
     opacity: 1;
-    transform: scale(1.15);
+    transform: scale(1.15)
 }
 
-.controls b#play-pause {
-    font-size: 2.3rem;
+#play-pause {
+    font-size: 2.3rem
 }
 
 .volume-control input[type="range"] {
     width: 100px;
-    accent-color: #4facfe;
+    accent-color: #4facfe
 }
 
 #youtube-player {
     position: absolute;
     left: -9999px;
     width: 1px;
-    height: 1px;
+    height: 1px
+}
+
+.brand-icon {
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block
 }
 
 body {
-    padding-bottom: 100px !important;   /* This creates space for the fixed player */
-    min-height: 100vh;
+    padding-bottom: 100px !important; 
+    min-height: 100vh
+}
+
+
+@media (max-width: 600px) {
+    #music-player {
+        padding: 10px 12px
+    }
+    .player-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px
+    }
+    .track-info h3 {
+        white-space: normal;
+        font-size: 1rem
+    }
+    .controls button {
+        font-size: 1.5rem;
+        padding: 6px
+    }
+    #play-pause {
+        font-size: 1.9rem
+    }
+    .volume-control input[type="range"] {
+        width: 150px
+    }
+    .brand-icon {
+        height: 34px
+    }
+    body {
+        padding-bottom: 85px !important
+    }
+}
+
+@media (min-width: 1200px) {
+    #music-player {
+        padding: 20px 30px
+    }
+    .player-container {
+        max-width: 1400px;
+        gap: 20px
+    }
+    .track-info h3 {
+        font-size: 1.3rem
+    }
+    .controls button {
+        font-size: 2rem
+    }
+    #play-pause {
+        font-size: 2.5rem
+    }
+    .volume-control input[type="range"] {
+        width: 140px
+    }
+    .brand-icon {
+        height: 45px
+    }
+    body {
+        padding-bottom: 120px !important
+    }
 }

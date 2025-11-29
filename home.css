@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+.hero-main {
+    text-align: center;
+    padding: clamp(20px, 6vw, 80px) 4%; /*clamp(min, preferred, max) , 4% of the screen width*/
+    max-width: 1000px;
+    margin: 0 auto
+}
+
+.hero-title {
+    font-size: clamp(2.2rem, 6vw, 3.25rem); /* ~35px—52px */
+    margin-bottom: 20px;
+    color: #ffffff;
+    line-height: 1.05
+}
+
+.appName {
+    color: #00bfff;
+    font-weight: 700;
+    font-size: inherit /* keeps same size as hero-title */
+}
+
+.hero-tagline {
+    font-size: clamp(1rem, 2.2vw, 1.5rem); /* ~16px—24px */
+    color: #00bfff;
+    margin: 30px 0;
+    font-weight: 600
+}
+
+.hero-sub {
+    font-size: clamp(0.95rem, 1.8vw, 1.1875rem); /* ~15px—19px */
+    line-height: 1.7;
+    color: #cccccc;
+    max-width: 750px;
+    margin: 40px auto
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: clamp(16px, 3vw, 30px);
+    margin: 50px 0;
+    align-items: start
+}
+
+.feature-card {
+    background: #1e1e1e;
+    padding: clamp(18px, 2.5vw, 30px);
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.6);
+    width: 100%
+}
+
+.feature-title {
+    color: #00bfff;
+    font-size: clamp(1.1rem, 2.2vw, 1.625rem); /* ~18px—26px */
+    margin-bottom: 12px
+}
+
+.feature-desc {
+    color: #ddd;
+    font-size: clamp(0.875rem, 1.6vw, 0.95rem); /* ~14px—15px */
+    line-height: 1.6
+}
+
+.cta-wrap {
+    text-decoration: none;
+    display: inline-block
+}
+
+.cta-button {
+    display: inline-block;
+    background: #00bfff;
+    color: white;
+    border: none;
+    padding: clamp(10px, 2vw, 16px) clamp(18px, 4.5vw, 40px);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 6px 20px rgba(0,191,255,0.35);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    line-height: 1
+}
+
+.cta-button:hover, .cta-button:focus {
+    transform: translateY(-3px)
+}
+
+.footer-note {
+    margin-top: 50px;
+    color: #888;
+    font-size: clamp(0.85rem, 1.2vw, 0.95rem)
+}
+
+.brand-icon {
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block
+}
+
+@media screen and (max-width: 720px) {
+    .hero-title {
+        margin-bottom: 12px
+    }
+    .feature-cards {
+        gap: 14px
+    }
+    .cta-button {
+        width: 100%;
+        padding: 12px 18px;
+        font-size: 1.05rem
+    }
+    .hero-sub {
+        margin: 24px auto
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-main {
+        padding-left: 6%;
+        padding-right: 6%
+    }
+    .hero-title {
+        font-size: clamp(2.8rem, 4vw, 3.6rem)
+    }
+}

@@ -270,4 +270,3 @@ async function displayFiveDayFromForecast(data) {
 `;
   });
 }
-
