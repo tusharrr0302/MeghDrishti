@@ -35,7 +35,8 @@ https://tusharrr0302.github.io/MeghDrishti/
 ## Setup
 
 1. Clone the repository  
-   git clone https://github.com/tusharrr0302/MeghDrishti/ 
+   ```bash
+   git clone https://github.com/tusharrr0302/MeghDrishti
 2. Add your OpenWeather API key in script.js  
 3. Run the project using a local server or open home.html directly
 
